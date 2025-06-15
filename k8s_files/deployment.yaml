@@ -2,22 +2,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pandacloud-app
+  name: devops-capstone-app
   labels:
-    app: pandacloud-app
+    app: devops-capstone-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: pandacloud-app
+      app: devops-capstone-app
   template:
     metadata:
       labels:
-        app: pandacloud-app
+        app: devops-capstone-app
     spec:
       containers:
-      - name: pandacloud-container
-        image: 309395755719.dkr.ecr.us-east-1.amazonaws.com/amazon-prime:latest
+      - name: devops-container
+        image: 381751878913.dkr.ecr.us-east-1.amazonaws.com/devops-capstone:latest
         ports:
         - containerPort: 3000
 ...
